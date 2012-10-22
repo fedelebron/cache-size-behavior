@@ -1,0 +1,4 @@
+An example of the effect of cache behavior in matrix multiplication.
+
+Called with parameters n and k as its arguments, the program multiplies two random n x n matrices, in blocks of size k (with n % k == 0). If k is suitably picked, the block size will encourage good cache behavior. 
+If k is too small, the overhead will drown the benefit of small blocks. If it is too large, the entire matrix may not fit in the cache, and due to the behavior of multiplication, each memory access will be a miss.
